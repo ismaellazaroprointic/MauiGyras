@@ -5,7 +5,19 @@
              x:Class="MauiGyras.MainPage">
 
     <Grid>
+        <!-- Canvas -->
         <skia:SKCanvasView x:Name="canvasView" />
+
+        <!-- HUD encima -->
+        <Grid VerticalOptions="Start" Padding="12"
+              RowDefinitions="Auto"
+              ColumnDefinitions="*,Auto,Auto">
+            <Label x:Name="lblHud" TextColor="White" FontSize="12" />
+            <Button Grid.Column="1" Text="Sensors"
+            Clicked="Sensors_Clicked" />
+            <Button Grid.Column="2" Text="Reset"
+            Clicked="Reset_Clicked" />
+        </Grid>
+
     </Grid>
 </ContentPage>
-
