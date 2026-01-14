@@ -185,8 +185,8 @@ public partial class MainPage : ContentPage
         // Si no, usamos drag (Windows).
         if (useSensors && Accelerometer.Default.IsSupported)
         {
-            inputX = accelX;
-            inputY = -accelY; // invertir para que “arriba” sea arriba en pantalla
+            inputX = -accelX;
+            inputY = accelY; // invertir para que “arriba” sea arriba en pantalla
         }
         else
         {
